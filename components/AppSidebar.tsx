@@ -14,7 +14,7 @@ import { Brain, Home, Pin, Scroll } from "lucide-react";
 
 export function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar className="p-6">
       <SidebarHeader>Sidebar Header</SidebarHeader>
       <SidebarContent>
         <SidebarMenuButton asChild>
