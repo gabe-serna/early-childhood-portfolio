@@ -8,6 +8,7 @@ import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import DropdownGroup from "./DropdownGroup";
 import { Brain, Home, Pin, Scroll } from "lucide-react";
@@ -15,7 +16,10 @@ import { Brain, Home, Pin, Scroll } from "lucide-react";
 export function AppSidebar() {
   return (
     <Sidebar className="p-6">
-      <SidebarHeader>Sidebar Header</SidebarHeader>
+      <SidebarHeader className="flex flex-row">
+        Sidebar Header
+        <SidebarTrigger />
+      </SidebarHeader>
       <SidebarContent>
         <SidebarMenuButton asChild>
           <a href="#">
