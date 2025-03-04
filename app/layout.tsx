@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Bayon, Crimson_Pro } from "next/font/google";
+import { Sour_Gummy } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
+import Navbar from "@/components/Navbar";
 
-const titleFont = Bayon({
-  weight: "400",
-  variable: "--title",
-  subsets: ["latin"],
-});
-
-const bodyFont = Crimson_Pro({
+const bodyFont = Sour_Gummy({
   variable: "--body",
   subsets: ["latin"],
 });
@@ -28,15 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${titleFont.variable} ${bodyFont.variable} antialiased`}
-      >
+      <body className={`${bodyFont.variable} antialiased`}>
         {/* <SidebarProvider> */}
-        <nav className={`navbar flex items-center justify-center gap-4`}>
-          <a>course papers</a>
-          <a>theory</a>
-          <a>resume</a>
-        </nav>
+        <Navbar />
         <div className="flex p-8 pb-20 sm:p-20">
           {/* <AppSidebar /> */}
           <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
