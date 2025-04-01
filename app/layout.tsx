@@ -23,61 +23,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bodyFont.variable} antialiased`}>
+      <body className={`${bodyFont.variable} bg-yellow-200 antialiased`}>
         {/* <SidebarProvider> */}
         <Navbar />
-        <div className="flex p-8 pb-20 sm:p-20">
-          {/* <AppSidebar /> */}
-          <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
-            {children}
-          </main>
-          <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/file.svg"
-                alt="File icon"
-                width={16}
-                height={16}
-              />
-              Learn
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/window.svg"
-                alt="Window icon"
-                width={16}
-                height={16}
-              />
-              Examples
-            </a>
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                aria-hidden
-                src="/globe.svg"
-                alt="Globe icon"
-                width={16}
-                height={16}
-              />
-              Go to nextjs.org →
-            </a>
-          </footer>
+        <Image
+          src="/baby.png"
+          alt="smiling baby"
+          width={400}
+          height={400}
+          className="mx-auto"
+        />
+        <div
+          style={{
+            backgroundImage: `url("tile background.png")`,
+            backgroundSize: "800px 800px",
+          }}
+          className="image-curve relative flex h-screen -translate-y-16 bg-white pb-20 sm:p-20"
+        >
+          <div className="absolute left-1/2 flex h-[calc(100vh+6rem)] w-[calc(100vw-10rem)] -translate-x-1/2 -translate-y-24 bg-white pb-20 sm:p-20">
+            <main className="row-start-2 flex flex-col items-center gap-4 pt-20 sm:items-start">
+              {children}
+            </main>
+          </div>
         </div>
         {/* </SidebarProvider> */}
       </body>

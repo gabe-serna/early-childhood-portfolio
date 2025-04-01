@@ -18,6 +18,28 @@ h4 {
   font-family: "Comic Sans MS";
 }
 
+.image-curve {
+  mask-image: radial-gradient(
+    ellipse 225% 190% at bottom,
+    black 0%,
+    black 49.94%,
+    black 49.95%,
+    transparent 50.1%,
+    transparent 80%
+  );
+}
+
+.inner-image-curve {
+  mask-image: radial-gradient(
+    ellipse 300% 190% at bottom,
+    black 0%,
+    black 49.94%,
+    black 49.95%,
+    transparent 50.1%,
+    transparent 80%
+  );
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
