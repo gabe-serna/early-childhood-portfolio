@@ -35,13 +35,13 @@ export default function RootLayout({
         />
         <div
           style={{
-            backgroundImage: `url("tile background.png")`,
+            backgroundImage: `url("../tile background.png")`,
             backgroundSize: "800px 800px",
           }}
           className="image-curve relative flex h-screen -translate-y-16 bg-white pb-20 sm:p-20"
         >
           <div className="absolute left-1/2 flex h-[calc(100vh+6rem)] w-[calc(100vw-10rem)] -translate-x-1/2 -translate-y-24 bg-white pb-20 sm:p-20">
-            <main className="row-start-2 flex flex-col items-center gap-6 pt-20 sm:items-start">
+            <main className="row-start-2 flex w-full flex-col items-center gap-6 pt-20 sm:items-start">
               {children}
             </main>
           </div>
